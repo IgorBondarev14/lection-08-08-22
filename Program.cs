@@ -1,8 +1,9 @@
-﻿double Factorial(int n) //int хранит малое количество символов. для того,что бы кооректно считались большие факториалы нужно использовать тип double
+﻿int Fibonachi(int n)
 {
-    if (n == 1) return 1;
-    else return n * Factorial(n-1);
+    if (n == 1 || n == 2) return 1;
+    else return Fibonachi(n - 1) + Fibonachi(n - 2);
 }
-Console.WriteLine("Введите число, для поисука факториала:");
-int p = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Факториал " + p + " равен " + Factorial(p));
+for (int i = 1; i < 10; i++)
+{
+    Console.WriteLine(Fibonachi(i));
+}
